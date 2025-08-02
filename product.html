@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Product Details - ShopEase</title>
+    <script src="js/script.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/interaction.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-main">
+            <div class="container header-main-container">
+                <!--merged image-->
+                <a href="#" class="logo">
+                    <svg width="151" height="46" viewBox="0 0 151 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M50.2136 32.8061H59.103C63.7762 32.8061 66.2652 30.3679 66.2652 27.056C66.2652 23.9778 64.0607 22.1186 61.6936 22.0069V21.8037C63.8575 21.316 65.4525 19.782 65.4525 17.3336C65.4525 14.2147 63.1362 12 58.5442 12H50.2136V32.8061ZM54.6126 29.2098V23.6831H58.3004C60.4135 23.6831 61.7241 24.9022 61.7241 26.6192C61.7241 28.1837 60.6573 29.2098 58.1988 29.2098H54.6126ZM54.6126 20.7065V15.5557H57.955C59.9055 15.5557 61.0129 16.5615 61.0129 18.0651C61.0129 19.7109 59.6719 20.7065 57.8737 20.7065H54.6126Z"
+                            fill="#8CB7F5" />
+                        <path
+                            d="M68.5182 32.8061H72.846V23.9778C72.846 22.0577 74.248 20.737 76.1579 20.737C76.7573 20.737 77.5802 20.8385 77.9866 20.9706V17.1304C77.6005 17.039 77.0621 16.978 76.6253 16.978C74.8779 16.978 73.4454 17.994 72.8765 19.9242H72.7139V17.2015H68.5182V32.8061Z"
+                            fill="#8CB7F5" />
+                        <path
+                            d="M83.6988 33.1008C86.0049 33.1008 87.4983 32.095 88.2603 30.6422H88.3822V32.8061H92.4865V22.2812C92.4865 18.5629 89.3371 16.9984 85.8627 16.9984C82.1241 16.9984 79.6655 18.7864 79.0661 21.631L83.0689 21.9561C83.3635 20.9198 84.288 20.1579 85.8424 20.1579C87.3155 20.1579 88.1587 20.8995 88.1587 22.1796V22.2405C88.1587 23.2463 87.092 23.3784 84.3794 23.6425C81.291 23.927 78.5175 24.9632 78.5175 28.4478C78.5175 31.5362 80.7221 33.1008 83.6988 33.1008ZM84.9382 30.1139C83.6073 30.1139 82.6524 29.4942 82.6524 28.3056C82.6524 27.0865 83.6581 26.4871 85.182 26.2737C86.1268 26.1417 87.671 25.9182 88.1891 25.5728V27.2287C88.1891 28.8644 86.838 30.1139 84.9382 30.1139Z"
+                            fill="#8CB7F5" />
+                        <path
+                            d="M99.6438 23.7847C99.654 21.7732 100.853 20.5947 102.6 20.5947C104.337 20.5947 105.384 21.7326 105.374 23.6425V32.8061H109.701V22.8704C109.701 19.2334 107.568 16.9984 104.317 16.9984C102.001 16.9984 100.324 18.1362 99.6235 19.9547H99.4406V17.2015H95.316V32.8061H99.6438V23.7847Z"
+                            fill="#8CB7F5" />
+                        <path
+                            d="M118.334 33.0601C120.854 33.0601 122.164 31.6074 122.764 30.307H122.947V32.8061H127.214V12H122.896V19.8226H122.764C122.185 18.5527 120.935 16.9984 118.324 16.9984C114.901 16.9984 112.005 19.6601 112.005 25.0242C112.005 30.246 114.779 33.0601 118.334 33.0601ZM119.706 29.6161C117.583 29.6161 116.424 27.7265 116.424 25.0038C116.424 22.3015 117.562 20.4423 119.706 20.4423C121.809 20.4423 122.987 22.2202 122.987 25.0038C122.987 27.7875 121.789 29.6161 119.706 29.6161Z"
+                            fill="#8CB7F5" />
+                        <g opacity="0.8">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4674 2.91309H37.1848C40.9487 2.91309 44 6.28555 44 10.4457V35.5544C44 39.7145 40.9487 43.087 37.1848 43.087H14.4674C10.7034 43.087 7.65216 39.7145 7.65216 35.5544L7.65216 10.4457C7.65216 6.28555 10.7034 2.91309 14.4674 2.91309Z"
+                                fill="#0D6EFD" fill-opacity="0.2" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.13043 2.91309H32.0435C36.0055 2.91309 39.2174 6.28555 39.2174 10.4457V35.5544C39.2174 39.7145 36.0055 43.087 32.0435 43.087H8.13043C4.16838 43.087 0.956512 39.7145 0.956513 35.5544L0.956512 10.4457C0.956512 6.28555 4.16838 2.91309 8.13043 2.91309Z"
+                                fill="#0D6EFD" />
+                            <g opacity="0.7">
+                                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.2902 19.3563H14.3097C14.2591 19.3563 14.1842 19.4266 14.1813 19.4731L13.4589 31.1478L26.9548 31.1452L26.2253 19.4731C26.2225 19.4284 26.1457 19.3563 26.0969 19.3563H25.1164V21.3216C25.1164 21.8643 24.6765 22.3042 24.1338 22.3042C23.5911 22.3042 23.1512 21.8643 23.1512 21.3216V19.3563H17.2554V21.3216C17.2554 21.8643 16.8155 22.3042 16.2728 22.3042C15.7301 22.3042 15.2902 21.8643 15.2902 21.3216V19.3563Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.2033 12.4783C22.9153 12.4783 25.1164 14.6796 25.1164 17.3891L26.0969 17.3914C27.1835 17.3914 28.1192 18.2704 28.1867 19.3508L28.9244 31.1539C28.9921 32.2361 28.1698 33.1133 27.0865 33.1133H13.3201C12.2374 33.1133 11.4146 32.2344 11.4821 31.1539L12.2198 19.3508C12.2875 18.2686 13.2213 17.3914 14.3096 17.3914H15.2902C15.2902 14.6781 17.493 12.4783 20.2033 12.4783ZM23.1511 17.3915C23.1511 15.765 21.8299 14.4436 20.2033 14.4436C18.5778 14.4436 17.2554 15.7642 17.2554 17.3892L23.1511 17.3915ZM15.2902 19.3566H14.3096C14.2591 19.3566 14.1842 19.4269 14.1813 19.4733L13.4589 31.148L26.9548 31.1455L26.2253 19.4733C26.2225 19.4286 26.1457 19.3566 26.0969 19.3566H25.1164V21.3218C25.1164 21.8645 24.6765 22.3044 24.1338 22.3044C23.5911 22.3044 23.1512 21.8645 23.1512 21.3218V19.3566H17.2554V21.3218C17.2554 21.8645 16.8155 22.3044 16.2728 22.3044C15.7301 22.3044 15.2902 21.8645 15.2902 21.3218V19.3566Z"
+                                    fill="white" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </a>
+                <form class="search-form">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <div class="search-category">
+                        <span>All category</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary search-button">Search</button>
+                </form>
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="far fa-comment-alt"></i>
+                        <span>Message</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Orders</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>My cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <div class="container header-nav-container">
+                <ul class="nav-list">
+                    <li><a href="#"><i class="fas fa-bars"></i>
+                            All category</a></li>
+                    <li><a href="#">Hot offers</a></li>
+                    <li><a href="#">Gift boxes</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Help <i class="fas fa-chevron-down"></i>
+                        </a></li>
+                </ul>
+                <div class="nav-settings">
+                    <div class="setting-item">
+                        <span>English, USD</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="setting-item">
+                        <span>Ship to</span>
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="22" height="16" fill="url(#pattern0_15050_1797)" />
+                            <defs>
+                                <pattern id="pattern0_15050_1797" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_15050_1797"
+                                        transform="matrix(0.0181818 0 0 0.025 -0.00909091 0)" />
+                                </pattern>
+                                <image id="image0_15050_1797" width="56" height="40" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAoCAYAAAHcVwkTAAAABGdBTUEAALGPC/xhBQAAARtJREFUaAXtV8ENgzAQI1VWYIAKiXe7VzteR+ke5Y2AVu37HGGBRa7HE8u5s30hIfV9vzTGczLef1+nV9uazDwuJtak5Xk20VRVQ8igPE0Twk0MOmuyPgA0FhFh0IgI00JEuiJN1MfBt4p2D3JVPwC0RnpykH6E0Z2iRREmL0h/N5AKhMkVygvm8XZBDmyO0TuY7URuqbxgfGnY2TB58gz9F6SvJ2ZIBSBOi4JB6+E/mFL2ZrrezB8jN/cry6V4cQBTtiGS/20hVyi/06B898Dkju4hAq0ZApE7NWDuE8zzPNcQBN1jfnQdTa6BKL/jq01xvwdDoHqktq7nPsE8OD8m5L+EW49gaT33IxoCSyNwdDwSPHpCpf7cJ/gGcQZL7ByV1IgAAAAASUVORK5CYII=" />
+                            </defs>
+                        </svg>
+
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="product-details" class="container">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Clothings</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Men's wear</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#" aria-current="page">Summer clothing</a></li>
+            </ol>
+        </nav>
+
+        <div class="product-layout">
+            <div class="product-main-content">
+                <div class="product-summary-card">
+                    <div class="product-gallery">
+                        <!--merged image-->
+                        <div class="main-image-container">
+
+                            <img src="Image/image 34.png" alt="Mens Long Sleeve T-shirt" class="main-image">
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <!--merged image-->
+                            <div class="thumbnail-item active">
+                                <img src="Image/image 34.png" alt="thumbnail 1">
+                            </div>
+                            <!--merged image-->
+                            <div class="thumbnail-item">
+                                <img src="Image/image 40.png" alt="thumbnail 2">
+                            </div>
+                            <!--merged image-->
+                            <div class="thumbnail-item">
+                                <img src="Image/image 36.png" alt="thumbnail 3">
+                            </div>
+                            <!--merged image-->
+                            <div class="thumbnail-item">
+                                <img src="Image/image 37.png" alt="thumbnail 4">
+                            </div>
+                            <!--merged image-->
+
+                            <!--merged image-->
+
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <p class="stock-status">
+                            <i class="fas fa-check-circle" style="color: #00B517;"></i>
+                            In stock
+                        </p>
+                        <h1 class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+                            <span class="rating-score">9.3</span>
+                            <span class="dot"></span>
+                            <a href="#" class="reviews-link"><i class="far fa-comment"></i> 32 reviews</a>
+                            <span class="dot"></span>
+                            <span class="sold-count"><i class="fas fa-shopping-basket"></i> 154 sold</span>
+                        </div>
+                        <div class="price-info">
+                            <div class="price-tier">
+                                <p class="price-amount-discounted">$98.00</p>
+                                <p class="price-quantity">50-100 pcs</p>
+                            </div>
+                            <div class="price-tier">
+                                <p class="price-amount">$90.00</p>
+                                <p class="price-quantity">100-700 pcs</p>
+                            </div>
+                            <div class="price-tier">
+                                <p class="price-amount">$78.00</p>
+                                <p class="price-quantity">700+ pcs</p>
+                            </div>
+                        </div>
+                        <dl class="product-specs-short">
+                            <div>
+                                <dt>Price:</dt>
+                                <dd>Negotiable</dd>
+                            </div>
+                            <hr>
+                            <div>
+                                <dt>Type:</dt>
+                                <dd>Classic shoes</dd>
+                            </div>
+                            <div>
+                                <dt>Material:</dt>
+                                <dd>Plastic material</dd>
+                            </div>
+                            <div>
+                                <dt>Design:</dt>
+                                <dd>Modern nice</dd>
+                            </div>
+                            <hr>
+                            <div>
+                                <dt>Customization:</dt>
+                                <dd>Customized logo and design custom packages</dd>
+                            </div>
+                            <div>
+                                <dt>Protection:</dt>
+                                <dd>Refund Policy</dd>
+                            </div>
+                            <div>
+                                <dt>Warranty:</dt>
+                                <dd>2 years full warranty</dd>
+                            </div>
+                        </dl>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <span>Qty: 1</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <div class="product-description-card">
+                    <nav class="description-tabs">
+                        <a href="#description" class="tab-item active">Description</a>
+                        <a href="#reviews" class="tab-item">Reviews</a>
+                        <a href="#shipping" class="tab-item">Shipping</a>
+                        <a href="#about-seller" class="tab-item">About seller</a>
+                    </nav>
+                    <div class="description-content" id="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Model</td>
+                                    <td>#8786867</td>
+                                </tr>
+                                <tr>
+                                    <td>Style</td>
+                                    <td>Classic style</td>
+                                </tr>
+                                <tr>
+                                    <td>Certificate</td>
+                                    <td>ISO-898921212</td>
+                                </tr>
+                                <tr>
+                                    <td>Size</td>
+                                    <td>34mm x 450mm x 19mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Memory</td>
+                                    <td>36GB RAM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul class="features-list">
+                            <li><svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.32917 9.22917L1.85417 5.75417L0.670837 6.92917L5.32917 11.5875L15.3292 1.58751L14.1542 0.412506L5.32917 9.22917Z"
+                                        fill="#8B96A5" />
+                                </svg>
+                                Some great feature name here</li>
+                            <li><svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.32917 9.22917L1.85417 5.75417L0.670837 6.92917L5.32917 11.5875L15.3292 1.58751L14.1542 0.412506L5.32917 9.22917Z"
+                                        fill="#8B96A5" />
+                                </svg>
+                                Lorem ipsum dolor sit amet, consectetur </li>
+                            <li><svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.32917 9.22917L1.85417 5.75417L0.670837 6.92917L5.32917 11.5875L15.3292 1.58751L14.1542 0.412506L5.32917 9.22917Z"
+                                        fill="#8B96A5" />
+                                </svg>
+                                le"></i> Duis aute irure dolor in reprehenderit</li>
+                            <li><svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.32917 9.22917L1.85417 5.75417L0.670837 6.92917L5.32917 11.5875L15.3292 1.58751L14.1542 0.412506L5.32917 9.22917Z"
+                                        fill="#8B96A5" />
+                                </svg>
+                                Some great feature name here</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <aside class="product-sidebar">
+                <div class="seller-info-card">
+                    <div class="seller-profile">
+                        <div class="seller-avatar">R</div>
+                        <div>
+                            <p class="seller-name">Guanjoi Trading LLC</p>
+                            <p class="seller-type">Supplier</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="seller-details">
+                        <li><svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="22" height="16" fill="url(#pattern0_15050_1797)" />
+                                <defs>
+                                    <pattern id="pattern0_15050_1797" patternContentUnits="objectBoundingBox" width="1"
+                                        height="1">
+                                        <use xlink:href="#image0_15050_1797"
+                                            transform="matrix(0.0181818 0 0 0.025 -0.00909091 0)" />
+                                    </pattern>
+                                    <image id="image0_15050_1797" width="56" height="40" preserveAspectRatio="none"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAoCAYAAAHcVwkTAAAABGdBTUEAALGPC/xhBQAAARtJREFUaAXtV8ENgzAQI1VWYIAKiXe7VzteR+ke5Y2AVu37HGGBRa7HE8u5s30hIfV9vzTGczLef1+nV9uazDwuJtak5Xk20VRVQ8igPE0Twk0MOmuyPgA0FhFh0IgI00JEuiJN1MfBt4p2D3JVPwC0RnpykH6E0Z2iRREmL0h/N5AKhMkVygvm8XZBDmyO0TuY7URuqbxgfGnY2TB58gz9F6SvJ2ZIBSBOi4JB6+E/mFL2ZrrezB8jN/cry6V4cQBTtiGS/20hVyi/06B898Dkju4hAq0ZApE7NWDuE8zzPNcQBN1jfnQdTa6BKL/jq01xvwdDoHqktq7nPsE8OD8m5L+EW49gaT33IxoCSyNwdDwSPHpCpf7cJ/gGcQZL7ByV1IgAAAAASUVORK5CYII=" />
+                                </defs>
+                            </svg>
+                            </i> Germany, Berlin</li>
+                        <li><svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8 0.833374L0.5 4.16671V9.16671C0.5 13.7917 3.7 18.1167 8 19.1667C12.3 18.1167 15.5 13.7917 15.5 9.16671V4.16671L8 0.833374ZM13.8333 9.16671C13.8333 12.9334 11.35 16.4084 8 17.4417C4.65 16.4084 2.16667 12.9334 2.16667 9.16671V5.25004L8 2.65837L13.8333 5.25004V9.16671ZM4.175 9.65837L3 10.8334L6.33333 14.1667L13 7.50004L11.825 6.31671L6.33333 11.8084L4.175 9.65837Z"
+                                    fill="#8B96A5" />
+                            </svg>
+                            Verified Seller</li>
+                        <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.99166 0.666626C4.39166 0.666626 0.666656 4.39996 0.666656 8.99996C0.666656 13.6 4.39166 17.3333 8.99166 17.3333C13.6 17.3333 17.3333 13.6 17.3333 8.99996C17.3333 4.39996 13.6 0.666626 8.99166 0.666626ZM14.7667 5.66663H12.3083C12.0417 4.62496 11.6583 3.62496 11.1583 2.69996C12.6917 3.22496 13.9667 4.29163 14.7667 5.66663ZM8.99999 2.36663C9.69166 3.36663 10.2333 4.47496 10.5917 5.66663H7.40832C7.76666 4.47496 8.30832 3.36663 8.99999 2.36663ZM2.54999 10.6666C2.41666 10.1333 2.33332 9.57496 2.33332 8.99996C2.33332 8.42496 2.41666 7.86663 2.54999 7.33329H5.36666C5.29999 7.88329 5.24999 8.43329 5.24999 8.99996C5.24999 9.56663 5.29999 10.1166 5.36666 10.6666H2.54999ZM3.23332 12.3333H5.69166C5.95832 13.375 6.34166 14.375 6.84166 15.3C5.30832 14.775 4.03332 13.7166 3.23332 12.3333ZM5.69166 5.66663H3.23332C4.03332 4.28329 5.30832 3.22496 6.84166 2.69996C6.34166 3.62496 5.95832 4.62496 5.69166 5.66663ZM8.99999 15.6333C8.30832 14.6333 7.76666 13.525 7.40832 12.3333H10.5917C10.2333 13.525 9.69166 14.6333 8.99999 15.6333ZM10.95 10.6666H7.04999C6.97499 10.1166 6.91666 9.56663 6.91666 8.99996C6.91666 8.43329 6.97499 7.87496 7.04999 7.33329H10.95C11.025 7.87496 11.0833 8.43329 11.0833 8.99996C11.0833 9.56663 11.025 10.1166 10.95 10.6666ZM11.1583 15.3C11.6583 14.375 12.0417 13.375 12.3083 12.3333H14.7667C13.9667 13.7083 12.6917 14.775 11.1583 15.3ZM12.6333 10.6666C12.7 10.1166 12.75 9.56663 12.75 8.99996C12.75 8.43329 12.7 7.88329 12.6333 7.33329H15.45C15.5833 7.86663 15.6667 8.42496 15.6667 8.99996C15.6667 9.57496 15.5833 10.1333 15.45 10.6666H12.6333Z"
+                                    fill="#8B96A5" />
+                            </svg>
+                            Worldwide shipping</li>
+                    </ul>
+                    <div class="seller-actions">
+                        <button class="btn btn-primary">Send inquiry</button>
+                        <button class="btn btn-outline">Seller’s profile</button>
+                    </div>
+                </div>
+                <a href="#" class="save-for-later">
+                    <i class="far fa-heart"></i>
+                    <span>Save for later</span>
+                </a>
+                <div class="you-may-like-card">
+                    <h3>You may like</h3>
+                    <ul class="liked-items-list">
+                        <li>
+                            <a href="#" class="liked-item">
+                                <!--merged image-->
+                                <div class="liked-item-img">
+                                    <img src="Image/cloth/1.jpg" alt="Men Blazers Sets Elegant Formal">
+                                </div>
+                                <div class="liked-item-info">
+                                    <p>Men Blazers Sets Elegant Formal</p>
+                                    <span>$7.00 - $99.50</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="liked-item">
+                                <!--merged image-->
+                                <div class="liked-item-img">
+                                    <img src="Image/cloth/2.jpg" alt="Men Shirt Sleeve Polo Contrast">
+                                </div>
+                                <div class="liked-item-info">
+                                    <p>Men Shirt Sleeve Polo Contrast</p>
+                                    <span>$7.00 - $99.50</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="liked-item">
+                                <!--merged image-->
+                                <div class="liked-item-img">
+                                    <img src="Image/cloth/3.jpg" alt="Apple Watch Series Space Gray">
+                                </div>
+                                <div class="liked-item-info">
+                                    <p>Apple Watch Series Space Gray</p>
+                                    <span>$7.00 - $99.50</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="liked-item">
+                                <!--merged image-->
+                                <div class="liked-item-img">
+                                    <img src="Image/cloth/4.jpg" alt="Basketball Crew Socks Long Stuff">
+                                </div>
+                                <div class="liked-item-info">
+                                    <p>Basketball Crew Socks Long Stuff</p>
+                                    <span>$7.00 - $99.50</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="liked-item">
+                                <!--merged image-->
+                                <div class="liked-item-img">
+                                    <img src="Image/cloth/5.jpg" alt="New Summer Men's castrol T-Shirts">
+                                </div>
+                                <div class="liked-item-info">
+                                    <p>New Summer Men's castrol T-Shirts</p>
+                                    <span>$7.00 - $99.50</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <section id="related-products" class="related-products-section">
+        <div class="container">
+            <div class="related-products-card">
+                <h2 class="section-title">Related products</h2>
+                <div class="products-grid">
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/1.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/2.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/3.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/4.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/5.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <!--merged image-->
+                        <div class="product-image-container">
+                            <img src="Image/tech/6.jpg" alt="Xiaomi Redmi 8 Original">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Xiaomi Redmi 8 Original</p>
+                            <p class="product-price">$32.00-$40.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="promo-banner" class="promo-banner-section">
+        <div class="container">
+            <div class="promo-banner-content">
+                <div class="promo-text">
+                    <h3>Super discount on more than 100 USD</h3>
+                    <p>Have you ever finally just write dummy info</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Shop now</a>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="newsletter">
+                <h3>Subscribe on our newsletter</h3>
+                <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-main">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">
+                    <div class="logo-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="logo-text">Brand</div>
+                </div>
+                <p class="brand-text">Best information about the company goes here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Partnership</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Money Refund</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>For users</h4>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">My Orders</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Get app</h4>
+                <div class="app-buttons">
+                    <a href="#" class="app-button">
+                        <img src="Image/00Group.png" alt="App Store" class="store-badge" width="124px" height="42px">
+                    </a>
+                    <a href="#" class="app-button">
+                        <img src="Image/Group.png" alt="Google Play" class="store-badge" width="124px" height="42px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2023 Ecommerce.
+            </div>
+            <div class="language-selector">
+                <img src="https://flagcdn.com/us.svg" alt="English" class="lang-flag"> 
+                English <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
